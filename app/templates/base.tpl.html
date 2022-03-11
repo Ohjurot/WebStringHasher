@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/www-data/semantic.min.css">
+        <link rel="stylesheet" href="/www-data/backgrounds.css">
+        <title>{{ page_title }}</title>
+    </head>
+    <body class="fancybg-1">
+        <div class="ui container">
+            <h2 style="margin-top: 10px;">{{ page_title }}</h2>
+            <div class="ui secondary pointing menu">
+                <a class="{% if hash_width == 32 %}active{% endif %} item" href="/H32">StrH32</a>
+                <a class="{% if hash_width == 64 %}active{% endif %} item" href="/H64">StrH64</a>
+                <a class="{% if hash_width == 128 %}active{% endif %} item" href="/H128">StrH128</a>
+                <div class="right menu">
+                    <a class="ui item" href="/stop">Stop Server</a>
+                </div>
+            </div>
+            <div class="ui segment">
+                {% block page_content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

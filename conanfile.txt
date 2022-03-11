@@ -1,0 +1,11 @@
+[requires]
+cpp-httplib/0.10.3
+jsoncpp/1.9.5
+inja/3.3.0
+xxhash/0.8.1
+
+[options]
+cpp-httplib:with_openssl=True
+
+[generators]
+premake

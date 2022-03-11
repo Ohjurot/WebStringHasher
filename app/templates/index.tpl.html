@@ -1,0 +1,15 @@
+{% extends "base.tpl.html" %}
+{% block page_content %}
+<div class="ui placeholder segment">
+    <div class="ui icon header">
+        <i class="hashtag icon"></i>
+        Please enter the string you want to be hashed!
+    </div>
+    <form class="ui form" action="/H{{ hash_width }}" method="POST">
+        <div class="field">
+          <textarea name="string_to_hash" rows="2"></textarea>
+        </div>
+        <button class="ui primary button" type="submit">Build {{ hash_width }}-Bit Hash</button>
+    </form>
+</div>
+{% endblock %}
